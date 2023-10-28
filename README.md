@@ -69,4 +69,4 @@ Once set up, use the provided scripts to preprocess images, train the model, and
 ## Datasets:
 The datasets used are uploaded in the repo. The below links are sources of the datasets.
 - **Training Data**: [Link to Training Dataset](https://www.kaggle.com/datasets/ananthu017/emotion-detection-fer)
-- **Additional Data**: [Link to Additional Dataset](https://universe.roboflow.com/university-ggw0y/emotional-detection-
+- **Additional Data**: [Link to Additional Dataset](https://universe.roboflow.com/university-ggw0y/emotional-detection-r3xb2)
