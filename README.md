@@ -41,7 +41,7 @@ pip install matplotlib
 ### Steps:
 
 1. **Clone the Repository**: First, clone this repository to your local machine using `git`.
-git clone [URL of the repository]
+git clone [https://github.com/khushaalll/AAI_Emotion_detection/tree/main]
 
 3. **Install Dependencies**: Run the commands provided above to install all the required libraries.
 4. **Prepare the Data**: Make sure you have the image datasets placed in the appropriate directories (`train_dir` and `test_dir` as specified in the code).
