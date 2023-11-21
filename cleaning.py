@@ -4,11 +4,11 @@ import cv2
 import os
 import numpy as np
 from skimage import io
-train_dir = "E:/AAI/Images/train"
-test_dir = "E:/AAI/Images/test"
+train_dir = r"/Users/roviandsouza/Documents/GitHub/AAI_Emotion_detection/train"
+test_dir = r"/Users/roviandsouza/Documents/GitHub/AAI_Emotion_detection/test"
 labels = ["Angry", "Bored", "Focused", "Neutral"]
-train_target_dir = "E:/AAI/Images/trained_cleaned_images"
-test_target_dir = "E:/AAI/Images/test_cleaned_images"
+train_target_dir = r"/Users/roviandsouza/Documents/GitHub/AAI_Emotion_detection/trained_cleaned_images"
+test_target_dir = r"/Users/roviandsouza/Documents/GitHub/AAI_Emotion_detection/test_cleaned_images"
 x_train = []
 y_train = []
 x_test = []

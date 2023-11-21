@@ -132,9 +132,9 @@ transform = transforms.Compose([
 
 # Load and split dataset
 
-train_data = datasets.ImageFolder(r'/Users/roviandsouza/Downloads/train 2/trained_cleaned_images',
+train_data = datasets.ImageFolder(r'/Users/roviandsouza/Documents/GitHub/AAI_Emotion_detection/trained_cleaned_images',
                                   transform=transform)
-test_data = datasets.ImageFolder(r'/Users/roviandsouza/Downloads/train 2/test_cleaned_images',
+test_data = datasets.ImageFolder(r'/Users/roviandsouza/Documents/GitHub/AAI_Emotion_detection/test_cleaned_images',
                                  transform=transform)
 train_idx, val_idx = train_test_split(range(len(train_data)), test_size=0.15)
 train_set = Subset(train_data, train_idx)
@@ -277,26 +277,26 @@ def main():
     model_variant1 = FacialCNNVariant1().to(device)
     model_variant2 = FacialCNNVariant2().to(device)
     class_names = ["Angry", "Bored", "Focused", "Neutral"]
-    # train_loss_history, val_loss_history = train_model(model, train_loader, val_loader)
-    # torch.save(model.state_dict(), 'facial_cnn_model.pth')
-    # plot_loss(train_loss_history, val_loss_history)
-    # print("Evaluating Main Model...")
-    # metrics = evaluate_model(model, test_loader, class_names)
-    # print("Main Model Evaluation Metrics:", metrics)
+    train_loss_history, val_loss_history = train_model(model, train_loader, val_loader)
+    torch.save(model.state_dict(), 'facial_cnn_model.pth')
+    plot_loss(train_loss_history, val_loss_history)
+    print("Evaluating Main Model...")
+    metrics = evaluate_model(model, test_loader, class_names)
+    print("Main Model Evaluation Metrics:", metrics)
 
-
-    train_model(model_variant1, train_loader, val_loader)
-    torch.save(model_variant1.state_dict(), 'facial_cnn_variant1_model.pth')  # Save Variant 1
-    print("Evaluating Variant 1...")
-    metrics_variant1 = evaluate_model(model_variant1, test_loader, class_names)
-    print("Variant 1 Evaluation Metrics:", metrics_variant1)
-
-    # Train and evaluate Variant 2
-    train_model(model_variant2, train_loader, val_loader)
-    torch.save(model_variant2.state_dict(), 'facial_cnn_variant2_model.pth')  # Save Variant 2
-    print("Evaluating Variant 2...")
-    metrics_variant2 = evaluate_model(model_variant2, test_loader, class_names)
-    print("Variant 2 Evaluation Metrics:", metrics_variant2)
+    #
+    # train_model(model_variant1, train_loader, val_loader)
+    # torch.save(model_variant1.state_dict(), 'facial_cnn_variant1_model.pth')  # Save Variant 1
+    # print("Evaluating Variant 1...")
+    # metrics_variant1 = evaluate_model(model_variant1, test_loader, class_names)
+    # print("Variant 1 Evaluation Metrics:", metrics_variant1)
+    #
+    # # Train and evaluate Variant 2
+    # train_model(model_variant2, train_loader, val_loader)
+    # torch.save(model_variant2.state_dict(), 'facial_cnn_variant2_model.pth')  # Save Variant 2
+    # print("Evaluating Variant 2...")
+    # metrics_variant2 = evaluate_model(model_variant2, test_loader, class_names)
+    # print("Variant 2 Evaluation Metrics:", metrics_variant2)
 
 
 if __name__ == "__main__":
